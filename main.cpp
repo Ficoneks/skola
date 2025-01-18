@@ -5,9 +5,9 @@ using namespace std;
 int main()
 {
     char a;
-    printf("unesi neki znak: ");
+    printf("unesi znak:");
     cin>> a;
-    a = a + 1;
-    printf("sljedeci znak je : %c", a);
+    printf("ASCII vrijednost znaka je: %i", a);
     return 0;
+
 }
