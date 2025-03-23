@@ -4,51 +4,102 @@ using namespace std;
 /*
 int main() {
     int a;
-    int n = 0;
     int brojac = 0;
     int i = 0;
+    int n = 0;
+
+    cout << "unesi broj n : ";
+    cin >> n;
+
+    do{
+        cout << "unesi neki broj  : ";
+        cin >> a;
+        if (a % 7 == 0){
+            brojac++;}
+        i++;
+    }while(i<n);
+    cout << brojac;
+    return 0;
+
+}
+*/
+
+/*
+int main() {
+    int a,n;
+    int prvi = 0;
+    int drugi = 0;
+    int i = 0;
+    int zbroj = 0;
 
     cout<<"unesi broj n:";
     cin>>n;
 
     do {
-        cout<<"unesi neki broj:";
+        cout<<"unesi dvoznamenkasti broj:";
         cin>>a;
-
-        if (a % 5 ==0) {
-            brojac++;
-        }
+        prvi =  a % 10;
+        drugi = (a / 10) % 10;
+        zbroj+=prvi;
+        zbroj+=drugi;
         i++;
     }while (i<n);
-    cout<<endl<<brojac;
+        cout<<zbroj<<endl;
+    return 0;
+
+}
+*/
+
+/*
+int main() {
+    int a,n;
+    int najmanji ;
+    int najveci;
+    int i = 0;
+
+    cout<<"unesi neki broj n:";
+    cin>>n;
+    najmanji=n;
+    najveci=n;
+
+    do {
+        cout<<"unesi broj:";
+        cin>>a;
+        if(a>najveci && a % 2 != 0)
+            najveci=a;
+        else if(a<najmanji && a % 2 != 0)
+            najmanji=a;
+        i++;
+    }while(i<n);
+    cout<<"najmanji neparni broj je "<<najmanji<<endl;
+    cout<<"najveci neparni broj je "<<najveci<<endl;
     return 0;
 }
 */
 
+/*
 int main() {
     int a;
-    int n = 0;
+    int prosti = 0;
+    int n;
     int i = 0;
-    int zbroja = 0;
-    int brojac = 0;
 
-    cout << "Enter the number of elements n: ";
+    cout << "Please enter a number: ";
     cin >> n;
 
     do {
-        cout << "Unesi neki broj: ";
+        cout << "Please enter a number: ";
         cin >> a;
-
-        if (a % 2 != 0) {
-            zbroja += a;
-            brojac++;
+        if (a % a == 0 && a % 2!=0) {
+            cout << a<<" je prosti broj" << endl;
+            prosti++;
+        }
+        else {
+            cout<<a <<" nije prosti broj"<<endl;
         }
         i++;
-    } while (i < n);
-
-    cout << "Prosjek neparnih brojeva: " << zbroja / brojac << endl;
+    }while (i<n);
+    cout <<"ima "<< prosti << " prosta broja" << endl;
     return 0;
 }
-
-
-
+*/
